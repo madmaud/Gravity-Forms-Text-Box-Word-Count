@@ -17,6 +17,7 @@ function m2d2_word_count_js_init()
 add_action('wp_enqueue_scripts', 'm2d2_word_count_js_init');
 
 // Added custom validation for maximum word count
+//Targets a specific form and field ID (2 is the form and 17 is the field ID in that form). Change this to match your own form.
 add_filter("gform_field_validation_2_17", "validate_word_count", 10, 4);
 
 function validate_word_count($result, $value, $form, $field)
